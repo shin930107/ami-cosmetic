@@ -1,0 +1,480 @@
+/* webfont */
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Gowun+Batang:wght@400;700&family=Nanum+Gothic:wght@400;700&display=swap');
+
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+body {
+  height: 100%;
+  font-size: 1rem;
+  font-family: 'Baskervville', serif;
+  font-family: 'Gowun Batang', serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #2D1900;
+}
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 공통 */
+h3 {
+  font-family: 'Baskervville', serif;
+  font-size: 6.25rem; /* 100px */
+  padding-top: 160px;
+}
+
+/*/////////////////////////////////////*/
+/* 헤더 & 메인비주얼 */
+.mainvisual {
+  width: 100%;
+  height: 980px;
+  background: url(../img/main-bg.png) no-repeat;
+}
+
+/* 로고 */
+.gnb-wrap .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.gnb-wrap .logo h1 {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 60px;
+}
+.gnb-wrap .logo h1 a img:nth-of-type(2) {
+  display: none;
+}
+
+/* gnb */
+.gnb-wrap {
+  padding-top: 80px;
+  width: 100%;
+}
+.gnb-wrap .gnb ul {
+  display: flex;
+  justify-content: center;
+  font-size: 1.625rem; /* 26px */
+  color: #fff;
+}
+.gnb-wrap .gnb ul li {
+  opacity: 0.8;
+  transition: 0.4s;
+}
+.gnb-wrap .gnb ul li:hover {
+  opacity: 1;
+  font-weight: 700;
+}
+.gnb-wrap .gnb ul li:not(:last-of-type) {
+  margin-right: 100px;
+}
+
+.gnb-wrap .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.gnb-wrap .hamburger span {
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 5px 0;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+
+/* 고정헤더 css */
+
+.gnb-wrap_clone .inner {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.gnb-wrap_clone .logo {
+ width: 300px;
+ margin-left: 40px;
+}
+.gnb-wrap_clone .logo .h1 {
+  align-items: center;
+}
+.gnb-wrap_clone .logo h1 a img:nth-of-type(1) {
+  display: none;
+}
+
+/* gnb */
+.gnb-wrap_clone {
+  width: 100%;
+  /* padding-top: 80px; */
+  z-index: 999;
+}
+.gnb-wrap_clone .gnb ul {
+  display: flex;
+  justify-content: center;
+  font-size: 1.625rem; /* 26px */
+  color: #292929;
+  line-height: 80px;
+}
+.gnb-wrap_clone .gnb ul li {
+  opacity: 0.8;
+  transition: 0.4s;
+}
+/* .gnb-wrap_clone .gnb ul li:not(:first-child) {
+  margin-left: 100px;
+} */
+.gnb-wrap_clone .gnb ul li:hover {
+  opacity: 1;
+  font-weight: 700;
+}
+.gnb-wrap_clone .gnb ul li {
+  margin-right: 100px;
+}
+.gnb-wrap_clone.sticky {
+  position:fixed;
+  top: 0;
+}
+.gnb-wrap_clone nav {
+  display: flex;
+}
+.gnb-wrap_clone .hamburger {
+  display: block;
+  cursor: pointer;
+  order: 2;
+  margin: 0 40px;
+}
+.gnb-wrap_clone .hamburger span {
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 4px 0;
+  border-radius: 15px;
+  background-color: #292929;
+}
+
+/* 메인 텍스트 */
+.mainvisual .main-text {
+  margin: 214px 0 272px;
+}
+.mainvisual .main-text h2,
+.mainvisual .main-text p {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.mainvisual .main-text h2 {
+  font-family: 'Gowun Batang', serif;
+  font-weight: 400;
+  font-size: 2.875rem; /* 46px */
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+.mainvisual .main-text p {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.25rem; /* 20px */
+}
+
+/* 스크롤 */
+.scroll-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.scroll {
+  position: relative;
+}
+.scroll .line {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  animation: scroll 1.5s infinite;
+}
+@keyframes scroll {
+  0% {transform: translateY(0);}
+  100% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+}
+
+/*/////////////////////////////////////*/
+/* 섹션1 */
+
+section {
+  position: relative;
+}
+/* 타이틀 */
+.section-bgcolor {
+  width: 70%;
+  height: 100%;
+  background-color: rgba(231, 217, 200, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.section1-wrap .title, .article-text {
+  margin-left: 146px;
+}
+.section1-wrap .title p {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* 아티클 */
+.article-wrap {
+  height: 100%;
+}
+.article-text h4 {
+  font-size: 2.75rem; /* 44px */
+  font-family: 'Gowun Batang', serif;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.article-text p {
+  font-size: 1.625rem;
+  color: #666666;
+  margin-bottom: 50px;
+}
+/* .article-text span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #E7D9C8;
+}
+.article-text span:first-of-type {
+  width: 50px;
+}
+.article-text span:not(:last-of-type) {
+  margin-right: 20px;
+} */
+.article {
+  /* display: flex; */
+  justify-content: space-between;
+  /* margin-top: 50px; */
+  width: 100%;
+}
+.article > .article-text{float: left;}
+.article > .article-img{float: right;}
+.article-img {
+  width: 940px;
+  height: 560px;
+}
+
+/*/////////////////////////////////////*/
+/* 섹션2 */
+.section2-wrap {
+  height: 980px;
+}
+.section2-wrap .title2 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.article2 ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* .article2 ul li:not(:last-of-type) {
+  margin-right: 213px;
+} */
+.article2 ul li {
+  width: 20%;
+  height: 480px;
+  position: relative;
+}
+.article2 ul li a:last-of-type {
+  position: absolute;
+  text-align: center;
+}
+.article2 ul li:nth-of-type(2) {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #FBF9F5;
+  position: relative;
+}
+/* .article2 {
+  position: relative;
+} */
+/* .article2 .button-wrap {
+  width: 40%;
+  text-align: center;
+} */
+.article2 {
+  position: relative;
+}
+.article2 .button {
+  width: 700px;
+  position: absolute;
+  top: 45%;
+  left: calc(50% - 350px);
+  cursor: pointer;
+  height: auto;
+}
+.article2 .button img {
+  display: block;
+  width: 78px;
+  height: 80px;
+  position: absolute;
+  opacity: 0.9;
+}
+.article2 .button img:hover {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.article2 .button img:first-of-type {
+  right: calc(100% - 80px);
+}
+.article2 .button img:last-of-type {
+  left: calc(100% - 80px);
+}
+
+
+/*/////////////////////////////////////*/
+/* 섹션3 */
+.section3-wrap {
+  height: 980px;
+  position: relative;
+  z-index: 1;
+}
+.section3-bgcolor::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: url(../img/section3-bg.png) no-repeat center;
+  opacity: 0.3;
+  z-index: -1;
+}
+.section3-bgcolor .bg-text {
+  display: none;
+}
+.section3-wrap .title {
+  margin-left: 146px;
+}
+.title .news {
+  display: flex;
+}
+.title .news img {
+  height: 24px;
+  margin: 210px 120px 0;
+}
+.title p {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin: 10px 0 80px;
+}
+.article3 {
+  max-width: 1628px;
+  margin: 0 auto;
+}
+.article3 ul {
+  display: flex;
+  justify-content: space-between;
+}
+.article3 ul li {
+  width: 516px;
+}
+.article3 ul li img {
+  height: 250px;
+  margin-bottom: 25px;
+}
+.article3 ul li p {
+  color: #666666;
+  font-size: 1.625rem;
+}
+.article3 ul li p:hover {
+  font-weight: 700;
+}
+
+/*/////////////////////////////////////*/
+/* 섹션4 */
+.section4-wrap {
+  height: 980px;
+  position: relative;
+  /* z-index: 1; */
+}
+.section4-bgcolor::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: url(../img/section4-bg1.png) no-repeat center;
+  z-index: -1;
+}
+.section4-wrap .title h3, .article4 p, .section-btn p {
+  color: #fff;
+}
+.section4-wrap .title h3, .article4 p {
+  margin: 0 0 60px 285px;
+}
+.article4 p {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+.section-btn p {
+  font-size: 1.25rem;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #fff;
+  width: 200px;
+  height: 40px;
+}
+.section-btn {
+  display: flex;
+  margin-left: 285px;
+}
+.section-btn .btn:nth-of-type(1) {
+  margin-right: 50px;
+}
+
+/*/////////////////////////////////////*/
+/* 푸터 */
+.footer-wrap {
+  background-color: #111;
+}
+.box {
+  width: 70%;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.textbox {
+  width: 50%;
+  color: #fff;
+}
+.textbox span {
+  line-height: 30px;
+}
+.textbox span:not(:nth-of-type(3n)) {
+  margin-right: 20px;
+}
+.textbox p {
+  font-size: 0.75rem;
+  padding-top: 20px;
+}
